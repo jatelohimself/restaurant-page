@@ -90,10 +90,47 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("alert(\"This is frustrating!\")\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n\n\n\n\nconst contentDiv = document.querySelector(\"#content\");\nconst header = document.createElement(\"header\");\nconst nav = document.createElement(\"nav\");\nconst ul = document.createElement(\"ul\");\n\nconst menuBtn = document.createElement(\"li\");\nmenuBtn.setAttribute(\"id\", \"menu-tab\");\nmenuBtn.setAttribute(\"class\", \"clickable\");\nmenuBtn.textContent = \"Menu\";\n\nconst homeBtn = document.createElement(\"div\")\nhomeBtn.setAttribute(\"id\", \"logo-nav\");\nhomeBtn.setAttribute(\"class\", \"clickable\");\nconst logoImg = document.createElement(\"img\");\nlogoImg.setAttribute(\"src\", \"images/logo.png\");\nlogoImg.setAttribute(\"alt\", \"lynettes logo\");\nhomeBtn.appendChild(logoImg);\n\nconst contactBtn = document.createElement(\"li\")\ncontactBtn.setAttribute(\"id\", \"contact-tab\");\ncontactBtn.setAttribute(\"class\", \"clickable\");\ncontactBtn.textContent = \"Contact\";\n\nul.appendChild(menuBtn);\nul.appendChild(homeBtn)\nul.appendChild(contactBtn);\nnav.appendChild(ul);\nheader.appendChild(nav);\n\nconst main = document.createElement(\"main\");\n\ncontentDiv.appendChild(header);\ncontentDiv.appendChild(main);\n\nObject(_modules_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(main);\n\n\nhomeBtn.addEventListener(\"click\", function() {\n  Object(_modules_home__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(main);\n})\n\nmenuBtn.addEventListener(\"click\", function() {\n  Object(_modules_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(main);\n})\n\ncontactBtn.addEventListener(\"click\", function() {\n  Object(_modules_contact__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(main);\n})\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/contact.js":
+/*!********************************!*\
+  !*** ./src/modules/contact.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return addContactElements; });\nfunction addContactElements(parent) {\n  const contactDetails = document.createElement(\"h1\");\n  contactDetails.setAttribute(\"class\", \"contact-detail\");\n  contactDetails.textContent = \"Contact Us\";\n\n  const contact = document.createElement(\"div\");\n  contact.setAttribute(\"id\", \"contact\");\n\n  const contactP = document.createElement(\"p\");\n  contactP.textContent = \"Contact us at: +254701803444\"\n  contact.appendChild(contactP);\n\n  parent.innerHTML = \"\";\n  parent.appendChild(contactDetails);\n  parent.appendChild(contact);\n}\n\n//# sourceURL=webpack:///./src/modules/contact.js?");
+
+/***/ }),
+
+/***/ "./src/modules/home.js":
+/*!*****************************!*\
+  !*** ./src/modules/home.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return addHomeElement; });\nfunction addHomeElement(parent) {\n  const home = document.createElement(\"div\");\n  home.setAttribute(\"id\", \"home\");\n\n  const homeImg = document.createElement(\"div\");\n  homeImg.setAttribute(\"id\", \"homeImg\");\n  const img = document.createElement(\"img\");\n  img.setAttribute(\"src\", \"images/pic1.jpg\");\n  img.setAttribute(\"alt\", \"a plate of rice\");\n  homeImg.appendChild(img);\n\n  const homeDescription = document.createElement(\"div\");\n  homeDescription.setAttribute(\"id\", \"home-description\");\n  const h1Description = document.createElement(\"h1\");\n  h1Description.textContent = \"We offer the best foods in town\";\n  const pDescription = document.createElement(\"p\");\n  pDescription.textContent = \"We offer the best services in a cool environment with very friendly staff members\";\n\n  homeDescription.appendChild(h1Description);\n  homeDescription.appendChild(pDescription);\n\n  home.appendChild(homeImg);\n  home.appendChild(homeDescription);\n\n  parent.innerHTML = \"\";\n  parent.appendChild(home);\n}\n\n//# sourceURL=webpack:///./src/modules/home.js?");
+
+/***/ }),
+
+/***/ "./src/modules/menu.js":
+/*!*****************************!*\
+  !*** ./src/modules/menu.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return addMenuElements; });\nfunction addMenuElements(parent) {\n  const menu = document.createElement(\"div\");\n  menu.setAttribute(\"id\", \"menu\");\n\n  const menuList = [\n    {\n      imgUrl: \"images/pic1.jpg\",\n      name: \"Rice\",\n      price: \"Ksh200\"\n    },\n    {\n      imgUrl: \"images/pic2.jpg\",\n      name: \"Chapati\",\n      price: \"Ksh250\"\n    },\n    {\n      imgUrl: \"images/pic3.jpg\",\n      name: \"Biryani\",\n      price: \"Ksh350\"\n    }\n  ]\n\n  const menuElements = menuList.map((item) =>{\n    const menuItem = document.createElement(\"div\");\n    menuItem.setAttribute(\"class\", \"menu-item\");\n\n    const itemImg = document.createElement(\"img\");\n    itemImg.setAttribute(\"src\", item.imgUrl);\n    itemImg.setAttribute(\"alt\", item.name);\n    menuItem.appendChild(itemImg);\n\n    const itemName = document.createElement(\"h2\");\n    itemName.textContent = item.name;\n    menuItem.appendChild(itemName);\n\n    const itemPrice = document.createElement(\"p\");\n    itemPrice.textContent = item.price;\n    menuItem.appendChild(itemPrice);\n\n    return menuItem\n  })\n\n  const pageTitle = document.createElement(\"h1\");\n  pageTitle.setAttribute(\"class\", \"page-title\");\n  pageTitle.textContent = \"menu\";\n\n  menuElements.forEach((el) => {\n    menu.appendChild(el);\n  })\n\n  parent.innerHTML = \"\";\n  parent.appendChild(pageTitle);\n  parent.appendChild(menu);\n}\n\n\n//# sourceURL=webpack:///./src/modules/menu.js?");
 
 /***/ })
 
