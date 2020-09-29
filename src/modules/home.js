@@ -5,8 +5,8 @@ export default function addHomeElement(parent) {
   const homeImg = document.createElement("div");
   homeImg.setAttribute("id", "homeImg");
   const img = document.createElement("img");
-  img.setAttribute("src", "images/pic1.jpg");
-  img.setAttribute("alt", "a plate of rice");
+  img.setAttribute("src", "images/pic4.jpg");
+  img.setAttribute("alt", "eggs, salad, waffles and an avocado");
   homeImg.appendChild(img);
 
   const homeDescription = document.createElement("div");
